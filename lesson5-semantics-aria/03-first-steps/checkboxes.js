@@ -21,6 +21,8 @@
     this.el.addEventListener('click', this.toggle.bind(this));
 
     // Any other set-up we want to do here?
+    this.el.setAttribute('role', 'checkbox');
+    this.el.hasAttribute('checked') ? this.el.setAttribute('aria-checked', 'true') : this.el.setAttribute('aria-checked', 'false');
   }
 
   Checkbox.prototype.handleKeyDown = function(e) {
